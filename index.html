@@ -498,977 +498,633 @@
             right: 10%;
             height: 2px;
             background: #E5D3AE;
-            z-index: 0;
         }
         .journey-step {
-            text-align: center;
             position: relative;
             z-index: 1;
-            padding: 8px;
+            text-align: center;
         }
-        .journey-step .step-num {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
+        .journey-step .circle {
+            width: 64px;
+            height: 64px;
             background: #B8904A;
-            color: #fff;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
             margin: 0 auto 12px;
-            box-shadow: 0 8px 24px rgba(184, 144, 74, 0.2);
-        }
-        .journey-step .step-label {
+            color: #fff;
             font-weight: 600;
-            font-size: 0.85rem;
-            color: #2F2F2F;
-            line-height: 1.3;
+            font-size: 1.1rem;
         }
-        .journey-step .step-desc {
-            font-size: 0.75rem;
-            color: #7a7a7a;
-            margin-top: 2px;
-        }
-
-        /* ── Healing Programs ── */
-        .programs-section {
-            background: #fff;
-        }
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .program-card {
-            padding: 32px 20px;
-            border-radius: 20px;
-            background: #FCFAF7;
-            border: 1px solid rgba(184, 144, 74, 0.06);
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-        .program-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
-            border-color: #B8904A;
-        }
-        .program-card .emoji {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-        .program-card h4 {
+        .journey-step h4 {
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
             color: #2F2F2F;
-            margin-bottom: 4px;
         }
-        .program-card p {
-            font-size: 0.85rem;
+        .journey-step p {
+            font-size: 0.8rem;
             color: #6a6a6a;
         }
-        .program-card .pill {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 4px 14px;
+
+        /* ── Contact Form Section ── */
+        .contact-section {
+            background: #fff;
+        }
+        .contact-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: #FCFAF7;
+            border-radius: 24px;
+            border: 1px solid rgba(184, 144, 74, 0.08);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-group label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #2F2F2F;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 1.5px solid rgba(184, 144, 74, 0.2);
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #2F2F2F;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #B8904A;
+            box-shadow: 0 0 0 3px rgba(184, 144, 74, 0.1);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-submit {
+            margin-top: 8px;
+        }
+        .form-submit button {
+            width: 100%;
+            padding: 14px;
+            background: #B8904A;
+            color: #fff;
+            border: none;
             border-radius: 50px;
-            background: rgba(184, 144, 74, 0.12);
-            color: #B8904A;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-submit button:hover {
+            background: #a07d3e;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(184, 144, 74, 0.3);
+        }
+        .form-submit button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .form-message {
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: none;
+        }
+        .form-message.success {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+            display: block;
+        }
+        .form-message.error {
+            background: rgba(192, 57, 43, 0.1);
+            color: #c0392b;
+            display: block;
         }
 
         /* ── Testimonials ── */
         .testimonials-section {
             background: #FCFAF7;
-            overflow: hidden;
         }
-        .testimonial-carousel {
-            max-width: 800px;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1000px;
             margin: 0 auto;
-            position: relative;
         }
-        .testimonial-track {
-            display: flex;
-            transition: transform 0.6s ease;
+        .testimonial-card {
+            padding: 32px 24px;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(184, 144, 74, 0.06);
         }
-        .testimonial-slide {
-            flex: 0 0 100%;
-            padding: 0 20px;
+        .testimonial-stars {
+            color: #B8904A;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: #3a3a3a;
+            margin-bottom: 16px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2F2F2F;
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, #B8904A 0%, #9a7a3d 100%);
+            color: #fff;
             text-align: center;
         }
-        .testimonial-slide blockquote {
+        .cta-content h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-style: italic;
-            color: #2F2F2F;
-            line-height: 1.6;
+            font-size: 2.5rem;
             margin-bottom: 16px;
         }
-        .testimonial-slide .author {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: #2F2F2F;
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            opacity: 0.95;
         }
-        .testimonial-slide .role {
-            font-size: 0.8rem;
-            color: #888;
-        }
-        .testimonial-slide .stars {
-            color: #B8904A;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-        .carousel-controls {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 28px;
-        }
-        .carousel-controls button {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 1px solid rgba(184, 144, 74, 0.2);
+        .cta-btn {
             background: #fff;
-            color: #2F2F2F;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .carousel-controls button:hover {
-            background: #B8904A;
-            color: #fff;
-            border-color: #B8904A;
-        }
-        .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 16px;
-        }
-        .carousel-dots span {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #d5d0c8;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .carousel-dots span.active {
-            background: #B8904A;
-            width: 28px;
-            border-radius: 8px;
-        }
-
-        /* ── FAQ ── */
-        .faq-section {
-            background: #fff;
-        }
-        .faq-list {
-            max-width: 700px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .faq-item {
-            border-radius: 16px;
-            background: #FCFAF7;
-            border: 1px solid rgba(184, 144, 74, 0.06);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .faq-item:hover {
-            border-color: rgba(184, 144, 74, 0.15);
-        }
-        .faq-question {
-            width: 100%;
-            padding: 20px 24px;
-            background: none;
-            border: none;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            color: #2F2F2F;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: left;
-            gap: 16px;
-        }
-        .faq-question .icon {
-            font-size: 1.4rem;
-            transition: transform 0.4s ease;
-            flex-shrink: 0;
             color: #B8904A;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
         }
-        .faq-item.open .faq-question .icon {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease, padding 0.5s ease;
-            padding: 0 24px;
-            color: #5a5a5a;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 300px;
-            padding: 0 24px 24px;
-        }
-
-        /* ── Contact (button only) ── */
-        .contact-section {
-            background: #FCFAF7;
-        }
-        .contact-cta {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .contact-cta .btn {
-            font-size: 1.2rem;
-            padding: 18px 60px;
-            box-shadow: 0 8px 30px rgba(184, 144, 74, 0.2);
-        }
-        .contact-cta .btn:hover {
-            box-shadow: 0 12px 40px rgba(184, 144, 74, 0.35);
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
 
         /* ── Footer ── */
         footer {
             background: #2F2F2F;
-            color: #d5d0c8;
-            padding: 48px 0 32px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 32px;
-        }
-        .footer-brand .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
             color: #fff;
-            margin-bottom: 8px;
+            padding: 40px 0 20px;
+            text-align: center;
         }
-        .footer-brand .logo span {
-            color: #B8904A;
-        }
-        .footer-brand p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            max-width: 280px;
-        }
-        .footer-col h5 {
-            color: #fff;
-            font-weight: 600;
-            font-size: 0.9rem;
+        footer p {
+            opacity: 0.8;
             margin-bottom: 12px;
-            letter-spacing: 0.02em;
-        }
-        .footer-col a {
-            display: block;
-            font-size: 0.85rem;
-            color: #b0aaa0;
-            transition: color 0.3s ease;
-            margin-bottom: 6px;
-        }
-        .footer-col a:hover {
-            color: #B8904A;
-        }
-        .footer-socials {
-            display: flex;
-            gap: 12px;
-            margin-top: 8px;
-        }
-        .footer-socials a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: #b0aaa0;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        .footer-socials a:hover {
-            border-color: #B8904A;
-            color: #B8904A;
-            background: rgba(184, 144, 74, 0.06);
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.8rem;
-            color: #888;
-        }
-        .footer-bottom .legal {
-            display: flex;
-            gap: 20px;
-        }
-        .footer-bottom .legal a {
-            color: #888;
-            transition: color 0.3s ease;
-        }
-        .footer-bottom .legal a:hover {
-            color: #B8904A;
         }
 
         /* ── Responsive ── */
         @media (max-width: 1024px) {
-            .hero-grid {
+            .hero-grid,
+            .transform-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
-            .hero-content p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-image img {
-                width: 400px;
-            }
-            .programs-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .why-grid {
+            .why-grid,
+            .testimonials-grid,
+            .trust-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .journey-timeline {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 24px;
             }
             .journey-timeline::before {
                 display: none;
             }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 280px;
-                height: 100vh;
-                background: #FCFAF7;
-                flex-direction: column;
-                padding: 80px 32px 32px;
-                gap: 20px;
-                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.06);
-                transition: right 0.4s ease;
-                align-items: flex-start;
-                font-size: 1rem;
-            }
-            .nav-links.open {
-                right: 0;
+                display: none;
             }
             .nav-toggle {
                 display: flex;
-                z-index: 1001;
             }
-            .nav-links .nav-cta {
-                margin-top: 8px;
+            .hero {
+                padding: 100px 0 60px;
             }
-            .hero-content h1 {
-                font-size: 2.6rem;
+            .hero-grid {
+                gap: 30px;
             }
-            .hero-image img {
-                width: 320px;
-            }
-            .transform-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-            .transform-arrow {
-                transform: rotate(90deg);
-            }
-            .why-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .programs-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .journey-timeline {
-                grid-template-columns: 1fr 1fr;
-            }
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-            .contact-cta .btn {
-                padding: 16px 40px;
-                font-size: 1rem;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-bottom .legal {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .testimonial-slide blockquote {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 2rem;
             }
-            .hero-buttons .btn {
-                padding: 12px 28px;
-                font-size: 0.9rem;
-                width: 100%;
-                text-align: center;
-            }
             .hero-image img {
-                width: 260px;
+                width: 300px;
             }
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-            .programs-grid {
+            .why-grid,
+            .testimonials-grid,
+            .trust-grid {
                 grid-template-columns: 1fr;
             }
             .journey-timeline {
-                grid-template-columns: 1fr 1fr;
-            }
-            .trust-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-            }
-            .trust-item .desc {
-                font-size: 0.7rem;
+                grid-template-columns: 1fr;
             }
             .section-title {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
-            .nav-logo {
-                font-size: 1.1rem;
+            .cta-content h2 {
+                font-size: 1.5rem;
             }
-            .contact-cta .btn {
-                padding: 14px 30px;
-                font-size: 0.95rem;
-                width: 100%;
+            .contact-wrapper {
+                padding: 40px 24px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- ─── NAVIGATION ─── -->
-    <nav id="navbar">
+    <!-- Navigation -->
+    <nav>
         <div class="nav-inner">
-            <div class="nav-logo">Reiki<span>Healing</span></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#reiki">About</a></li>
-                <li><a href="#why">Why Me</a></li>
+            <div class="nav-logo">Reiki <span>Healing</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#why">Why Choose</a></li>
                 <li><a href="#journey">Journey</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="nav-cta">Book Free Consultation</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://links.nexafunnels.com/preview/QwgnX6vQtSAxZlI26roL" class="nav-cta">Book Now</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </nav>
 
-    <!-- ─── HERO ─── -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content reveal">
-                    <h1>RESTORE BALANCE.<br /><span class="gold-text">Heal from within.</span></h1>
-                    <p>Experience the profound stillness of distance Reiki healing — personalized, confidential, and guided with intention.</p>
+            <div class="hero-grid reveal">
+                <div class="hero-content reveal-left">
+                    <h1>Experience Deep <span class="gold-text">Healing</span> & Inner Peace</h1>
+                    <p>Transform your emotional wellness through authentic Reiki healing. Find balance, reduce stress, and reconnect with your true self.</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Book FREE Consultation</a>
-                        <a href="#reiki" class="btn btn-outline">Watch Healing Journey →</a>
+                        <a href="https://links.nexafunnels.com/preview/QwgnX6vQtSAxZlI26roL" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
                     </div>
                 </div>
                 <div class="hero-image reveal-right">
-                    <img src="https://assets.cdn.filesafe.space/V9UqwLNrgoi4AGp4ijb0/media/6a5915252f7322e0961f12a6.png" alt="Reiki Healing by Rohit Narendra Jitkar" />
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop" alt="Reiki Healing">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ─── TRUST BAR ─── -->
-    <section class="trust-bar reveal">
+    <!-- Trust Bar -->
+    <section class="trust-bar">
         <div class="container">
             <div class="trust-grid">
-                <div class="trust-item">
-                    <span class="icon">🌍</span>
-                    <span class="label">Distance Reiki</span>
-                    <span class="desc">Worldwide sessions</span>
+                <div class="trust-item reveal">
+                    <div class="icon">✨</div>
+                    <div class="label">10+ Years</div>
+                    <div class="desc">Professional Experience</div>
                 </div>
-                <div class="trust-item">
-                    <span class="icon">🔒</span>
-                    <span class="label">Private &amp; Confidential</span>
-                    <span class="desc">Your healing is sacred</span>
+                <div class="trust-item reveal">
+                    <div class="icon">👥</div>
+                    <div class="label">500+ Clients</div>
+                    <div class="desc">Transformed Lives</div>
                 </div>
-                <div class="trust-item">
-                    <span class="icon">🧘</span>
-                    <span class="label">Personalized Sessions</span>
-                    <span class="desc">Tailored to your energy</span>
+                <div class="trust-item reveal">
+                    <div class="icon">💯</div>
+                    <div class="label">98% Satisfaction</div>
+                    <div class="desc">Client Happiness</div>
                 </div>
-                <div class="trust-item">
-                    <span class="icon">⭐</span>
-                    <span class="label">Professional Guidance</span>
-                    <span class="desc">Certified practitioner</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── EMOTIONAL TRANSFORMATION ─── -->
-    <section class="transform-section section-padding" id="transform">
-        <div class="container">
-            <div class="section-label reveal">Transformation</div>
-            <h2 class="section-title reveal">Emotional Shift</h2>
-            <p class="section-sub reveal">From what holds you back to what sets you free.</p>
-            <div class="transform-grid reveal">
-                <div class="transform-col from">
-                    <h3>From</h3>
-                    <ul>
-                        <li><span class="badge">✕</span> Stress &amp; Overwhelm</li>
-                        <li><span class="badge">✕</span> Anxiety &amp; Worry</li>
-                        <li><span class="badge">✕</span> Mental Fatigue</li>
-                        <li><span class="badge">✕</span> Poor Sleep</li>
-                        <li><span class="badge">✕</span> Relationship Stress</li>
-                    </ul>
-                </div>
-                <div class="transform-arrow">→</div>
-                <div class="transform-col to">
-                    <h3>To</h3>
-                    <ul>
-                        <li><span class="badge">✓</span> Deep Peace</li>
-                        <li><span class="badge">✓</span> Emotional Balance</li>
-                        <li><span class="badge">✓</span> Mental Clarity</li>
-                        <li><span class="badge">✓</span> Restorative Sleep</li>
-                        <li><span class="badge">✓</span> Renewed Energy</li>
-                    </ul>
+                <div class="trust-item reveal">
+                    <div class="icon">🌟</div>
+                    <div class="label">Certified Master</div>
+                    <div class="desc">Reiki Practitioner</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ─── WHAT IS REIKI ─── -->
-    <section class="reiki-section section-padding" id="reiki">
+    <!-- Transformation Section -->
+    <section class="transform-section section-padding" id="about">
         <div class="container">
-            <div class="section-label reveal">Understanding</div>
-            <h2 class="section-title reveal">What is Reiki?</h2>
+            <div class="section-label" style="text-align: center;">Your Healing Journey</div>
+            <h2 class="section-title" style="text-align: center;">From Struggling to Thriving</h2>
+            <div class="transform-grid">
+                <div class="transform-col from reveal-left">
+                    <h3>Before Reiki</h3>
+                    <ul>
+                        <li><span class="badge">❌</span> Constant stress & anxiety</li>
+                        <li><span class="badge">❌</span> Emotional exhaustion</li>
+                        <li><span class="badge">❌</span> Physical tension & pain</li>
+                        <li><span class="badge">❌</span> Sleep disturbances</li>
+                        <li><span class="badge">❌</span> Lack of direction</li>
+                        <li><span class="badge">❌</span> Disconnected & lost</li>
+                    </ul>
+                </div>
+                <div class="transform-col to reveal-right">
+                    <h3>After Reiki</h3>
+                    <ul>
+                        <li><span class="badge">✓</span> Deep inner peace</li>
+                        <li><span class="badge">✓</span> Emotional clarity</li>
+                        <li><span class="badge">✓</span> Pain relief & relaxation</li>
+                        <li><span class="badge">✓</span> Restful sleep</li>
+                        <li><span class="badge">✓</span> Clear purpose</li>
+                        <li><span class="badge">✓</span> Connected & empowered</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Reiki -->
+    <section class="reiki-section section-padding">
+        <div class="container">
+            <div class="section-label" style="text-align: center;">Understanding Reiki</div>
+            <h2 class="section-title" style="text-align: center;">Ancient Healing for Modern Wellness</h2>
             <div class="reiki-content reveal">
-                <p>Reiki is a gentle, non-invasive energy healing practice that supports your body's natural ability to restore balance and well-being. It works with the subtle energy that flows through all living beings, helping to release blockages and promote deep relaxation.</p>
-                <p>Through distance Reiki, healing energy is transmitted across time and space, guided by intention and compassion. It is a complementary wellness practice that pairs beautifully with medical care to support your overall health journey.</p>
-                <div class="disclaimer">Reiki is a complementary wellness practice and is not a substitute for medical care. Always consult your healthcare provider for any medical concerns.</div>
+                <p>Reiki is a Japanese energy healing technique that promotes relaxation, reduces stress, and supports the body's natural healing abilities. Through gentle touch and energy work, I help restore balance to your physical, emotional, and spiritual self.</p>
+                <p>During a Reiki session, universal life force energy flows through me to you, removing blockages and restoring harmony. You'll experience deep relaxation, clarity, and a renewed sense of purpose.</p>
+                <div class="disclaimer">⚕️ <strong>Medical Disclaimer:</strong> Reiki is a complementary wellness practice and should not replace professional medical advice. Always consult with healthcare providers for medical conditions.</div>
             </div>
         </div>
     </section>
 
-    <!-- ─── WHY CHOOSE ME ─── -->
+    <!-- Why Choose Me -->
     <section class="why-section section-padding" id="why">
         <div class="container">
-            <div class="section-label reveal">Why Choose Me</div>
-            <h2 class="section-title reveal">Healing with Heart</h2>
-            <p class="section-sub reveal">A space of trust, presence, and genuine care.</p>
+            <div class="section-label" style="text-align: center;">Why Choose Me</div>
+            <h2 class="section-title" style="text-align: center;">What Makes My Practice Unique</h2>
             <div class="why-grid">
-                <div class="why-card glass reveal">
-                    <div class="icon">🌍</div>
-                    <h4>Distance Reiki Worldwide</h4>
-                    <p>Healing energy knows no boundaries — receive support from anywhere in the world.</p>
+                <div class="why-card reveal">
+                    <div class="icon">🎓</div>
+                    <h4>Certified Expert</h4>
+                    <p>Fully certified Reiki Master with years of professional training and continuous education.</p>
                 </div>
-                <div class="why-card glass reveal">
-                    <div class="icon">🤝</div>
-                    <h4>Confidential &amp; Safe</h4>
-                    <p>Your experience is held with the utmost privacy and respect.</p>
+                <div class="why-card reveal">
+                    <div class="icon">💝</div>
+                    <h4>Compassionate Care</h4>
+                    <p>I create a safe, judgment-free space where your healing journey is honored and supported.</p>
                 </div>
-                <div class="why-card glass reveal">
+                <div class="why-card reveal">
                     <div class="icon">🌱</div>
-                    <h4>Personalized Healing</h4>
-                    <p>Every session is uniquely tailored to your energy and intentions.</p>
+                    <h4>Holistic Approach</h4>
+                    <p>I address the mind, body, and spirit for comprehensive transformation and lasting wellness.</p>
                 </div>
-                <div class="why-card glass reveal">
-                    <div class="icon">📋</div>
-                    <h4>Professional Guidance</h4>
-                    <p>Certified, experienced, and deeply committed to your well-being.</p>
+                <div class="why-card reveal">
+                    <div class="icon">📊</div>
+                    <h4>Proven Results</h4>
+                    <p>Hundreds of clients have experienced tangible improvements in stress, health, and quality of life.</p>
                 </div>
-                <div class="why-card glass reveal">
-                    <div class="icon">📅</div>
-                    <h4>Flexible Scheduling</h4>
-                    <p>Book at a time that honors your rhythm and lifestyle.</p>
+                <div class="why-card reveal">
+                    <div class="icon">🕯️</div>
+                    <h4>Personalized Sessions</h4>
+                    <p>Each session is tailored to your unique needs, goals, and energy for maximum effectiveness.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="icon">✨</div>
+                    <h4>Intuitive Guidance</h4>
+                    <p>I combine Reiki with intuitive insights to support your personal growth and spiritual awakening.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ─── HEALING JOURNEY ─── -->
+    <!-- Healing Journey Timeline -->
     <section class="journey-section section-padding" id="journey">
         <div class="container">
-            <div class="section-label reveal">Your Path</div>
-            <h2 class="section-title reveal">Healing Journey</h2>
-            <p class="section-sub reveal">A simple, guided process to restore your inner balance.</p>
-            <div class="journey-timeline reveal">
-                <div class="journey-step">
-                    <div class="step-num">1</div>
-                    <div class="step-label">Free Consultation</div>
-                    <div class="step-desc">Connect &amp; share</div>
+            <div class="section-label" style="text-align: center;">Your Healing Path</div>
+            <h2 class="section-title" style="text-align: center;">The Reiki Journey</h2>
+            <div class="journey-timeline">
+                <div class="journey-step reveal">
+                    <div class="circle">1</div>
+                    <h4>Consultation</h4>
+                    <p>We discuss your goals & intentions</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-num">2</div>
-                    <div class="step-label">Assessment</div>
-                    <div class="step-desc">Understand your energy</div>
+                <div class="journey-step reveal">
+                    <div class="circle">2</div>
+                    <h4>Preparation</h4>
+                    <p>Create a calm, healing space</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-num">3</div>
-                    <div class="step-label">Distance Reiki Session</div>
-                    <div class="step-desc">Healing transmitted</div>
+                <div class="journey-step reveal">
+                    <div class="circle">3</div>
+                    <h4>Treatment</h4>
+                    <p>Receive energy healing & guidance</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-num">4</div>
-                    <div class="step-label">Guidance</div>
-                    <div class="step-desc">Insights &amp; integration</div>
+                <div class="journey-step reveal">
+                    <div class="circle">4</div>
+                    <h4>Integration</h4>
+                    <p>Transition & personalized advice</p>
                 </div>
-                <div class="journey-step">
-                    <div class="step-num">5</div>
-                    <div class="step-label">Feel More Balanced</div>
-                    <div class="step-desc">Renewed harmony</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── HEALING PROGRAMS ─── -->
-    <section class="programs-section section-padding" id="programs">
-        <div class="container">
-            <div class="section-label reveal">Programs</div>
-            <h2 class="section-title reveal">Choose Your Path</h2>
-            <p class="section-sub reveal">Options to support your unique healing rhythm.</p>
-            <div class="programs-grid">
-                <div class="program-card glass reveal">
-                    <div class="emoji">✨</div>
-                    <h4>Single Session</h4>
-                    <p>A focused distance Reiki session for deep relaxation.</p>
-                    <span class="pill">One session</span>
-                </div>
-                <div class="program-card glass reveal">
-                    <div class="emoji">🌿</div>
-                    <h4>3 Session Healing</h4>
-                    <p>Gradual release and restoration over three sessions.</p>
-                    <span class="pill">3 sessions</span>
-                </div>
-                <div class="program-card glass reveal">
-                    <div class="emoji">🌟</div>
-                    <h4>7 Session Deep Healing</h4>
-                    <p>Transformative depth for lasting change.</p>
-                    <span class="pill">7 sessions</span>
-                </div>
-                <div class="program-card glass reveal">
-                    <div class="emoji">🌅</div>
-                    <h4>21 Day Healing Journey</h4>
-                    <p>Immersive daily energy support for profound shift.</p>
-                    <span class="pill">21 days</span>
+                <div class="journey-step reveal">
+                    <div class="circle">5</div>
+                    <h4>Follow-up</h4>
+                    <p>Ongoing support & progress check</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ─── TESTIMONIALS ─── -->
-    <section class="testimonials-section section-padding" id="testimonials">
-        <div class="container">
-            <div class="section-label reveal">Testimonials</div>
-            <h2 class="section-title reveal">What Clients Say</h2>
-            <p class="section-sub reveal">Real experiences of healing and transformation.</p>
-            <div class="testimonial-carousel reveal">
-                <div class="testimonial-track" id="testimonialTrack">
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <blockquote>"After years of feeling stuck and anxious, Reiki helped me find a stillness I didn't know was possible. Rohit's guidance is gentle and profound."</blockquote>
-                        <div class="author">— Ananya S.</div>
-                        <div class="role">Mumbai, India</div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <blockquote>"I was skeptical about distance healing, but after just one session, I felt lighter and more grounded. It's a beautiful, nurturing practice."</blockquote>
-                        <div class="author">— James K.</div>
-                        <div class="role">London, UK</div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <blockquote>"Rohit's presence is calming and his energy work is incredibly powerful. I have experienced deep emotional release and clarity."</blockquote>
-                        <div class="author">— Priya R.</div>
-                        <div class="role">New York, USA</div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <blockquote>"The 21-day journey was life-changing. I feel more connected to myself and my purpose. Thank you for this gift."</blockquote>
-                        <div class="author">— Meera D.</div>
-                        <div class="role">Sydney, Australia</div>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button id="prevTestimonial" aria-label="Previous">‹</button>
-                    <button id="nextTestimonial" aria-label="Next">›</button>
-                </div>
-                <div class="carousel-dots" id="testimonialDots"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── FAQ ─── -->
-    <section class="faq-section section-padding" id="faq">
-        <div class="container">
-            <div class="section-label reveal">FAQ</div>
-            <h2 class="section-title reveal">Questions &amp; Answers</h2>
-            <p class="section-sub reveal">Everything you need to know about Reiki healing.</p>
-            <div class="faq-list reveal">
-                <div class="faq-item open">
-                    <button class="faq-question">
-                        What is distance Reiki and how does it work?
-                        <span class="icon">▾</span>
-                    </button>
-                    <div class="faq-answer">Distance Reiki is a healing practice where energy is transmitted across time and space using intention and connection. It works through the universal life force energy, which flows to the recipient regardless of physical location. Many people experience it as deeply relaxing and restorative.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do I need to prepare for a session?
-                        <span class="icon">▾</span>
-                    </button>
-                    <div class="faq-answer">No special preparation is needed. Simply find a quiet, comfortable space where you can relax without interruption for about 30–40 minutes. You can lie down or sit comfortably — whatever feels right for you.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How many sessions do I need?
-                        <span class="icon">▾</span>
-                    </button>
-                    <div class="faq-answer">The number of sessions varies depending on your intentions and needs. Some people feel a shift after just one session, while others benefit from a series of sessions for deeper, lasting change. We'll discuss this during your free consultation.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can Reiki help with anxiety and sleep issues?
-                        <span class="icon">▾</span>
-                    </button>
-                    <div class="faq-answer">Many clients report reduced anxiety, better sleep, and an overall sense of calm after Reiki sessions. It supports the nervous system and promotes deep relaxation, which can positively impact sleep and stress levels.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Is Reiki a substitute for medical treatment?
-                        <span class="icon">▾</span>
-                    </button>
-                    <div class="faq-answer">No. Reiki is a complementary wellness practice that supports your overall well-being. It is not a substitute for professional medical care. Always consult your healthcare provider for any medical concerns.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── CONTACT ─── -->
+    <!-- Contact Form Section -->
     <section class="contact-section section-padding" id="contact">
         <div class="container">
-            <div class="section-label reveal" style="text-align: center;">Connect</div>
-            <h2 class="section-title reveal" style="text-align: center;">Book Your Free Consultation</h2>
-            <p class="section-sub reveal" style="text-align: center;">Take the first step toward deeper balance and peace.</p>
-            <div class="contact-cta reveal" style="text-align: center;">
-                <a href="https://links.nexafunnels.com/preview/QwgnX6vQtSAxZlI26roL" class="btn btn-primary">Book Free Consultation</a>
+            <div class="section-label" style="text-align: center;">Get in Touch</div>
+            <h2 class="section-title" style="text-align: center;">Send Me a Message</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-message" id="formMessage"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your wellness goals..." required></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- ─── FOOTER ─── -->
+    <!-- Testimonials -->
+    <section class="testimonials-section section-padding">
+        <div class="container">
+            <div class="section-label" style="text-align: center;">What Clients Say</div>
+            <h2 class="section-title" style="text-align: center;">Transformation Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Rohit's Reiki sessions completely transformed my life. I went from constant anxiety to feeling deeply peaceful. Highly recommended!"</p>
+                    <div class="testimonial-author">- Sarah M.</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I was skeptical at first, but after my first session, I felt such a profound shift. The energy work is real and healing is tangible."</p>
+                    <div class="testimonial-author">- James K.</div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Rohit is genuinely gifted. His compassion and expertise helped me release years of emotional baggage. I feel reborn!"</p>
+                    <div class="testimonial-author">- Maria L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Transform Your Life?</h2>
+                <p>Book your free consultation today and take the first step toward healing and wholeness.</p>
+                <a href="https://links.nexafunnels.com/preview/QwgnX6vQtSAxZlI26roL" class="cta-btn">Book Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">Reiki<span>Healing</span></div>
-                    <p>Rohit Narendra Jitkar &bull; Certified Reiki Practitioner &bull; Guiding you back to your natural state of balance.</p>
-                    <div class="footer-socials">
-                        <a href="mailto:rohitjitkar71@gmail.com" aria-label="Email">✉</a>
-                        <a href="https://wa.me/918087150657" aria-label="WhatsApp" target="_blank">💬</a>
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Facebook">👍</a>
-                        <a href="#" aria-label="YouTube">▶</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h5>Quick Links</h5>
-                    <a href="#home">Home</a>
-                    <a href="#reiki">About Reiki</a>
-                    <a href="#why">Why Me</a>
-                    <a href="#journey">Journey</a>
-                    <a href="#programs">Programs</a>
-                </div>
-                <div class="footer-col">
-                    <h5>Support</h5>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact">Book Consultation</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-                <div class="footer-col">
-                    <h5>Connect</h5>
-                    <a href="mailto:rohitjitkar71@gmail.com">Email: rohitjitkar71@gmail.com</a>
-                    <a href="https://wa.me/918087150657" target="_blank">WhatsApp: +91 80871 50657</a>
-                    <a href="#contact">Schedule a call</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>&copy; 2026 Reiki Healing by Rohit Narendra Jitkar. All rights reserved.</span>
-                <div class="legal">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Disclaimer</a>
-                    <a href="https://wa.me/918087150657" target="_blank">WhatsApp</a>
-                    <a href="mailto:rohitjitkar71@gmail.com">Email</a>
-                </div>
-            </div>
+            <p>&copy; 2024 Reiki Healing by Rohit Narendra Jitkar. All rights reserved.</p>
+            <p>For healing sessions and inquiries, visit our booking page or contact us below.</p>
         </div>
     </footer>
 
-    <!-- ─── JAVASCRIPT ─── -->
     <script>
-        (function() {
-            'use strict';
+        // Navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+        });
 
-            // ── Nav toggle ──
-            const navToggle = document.getElementById('navToggle');
-            const navLinks = document.getElementById('navLinks');
-            
-            navToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('open');
-            });
-            
-            document.querySelectorAll('.nav-links a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    navToggle.classList.remove('active');
-                    navLinks.classList.remove('open');
-                });
-            });
-
-            // ── Nav scroll shadow ──
-            const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 20) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+        // Scroll animations
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
 
-            // ── Scroll Reveal ──
-            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-            const revealObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        // Contact Form with Formspree
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            revealEls.forEach(function(el) {
-                revealObserver.observe(el);
-            });
-
-            // ── Testimonials Carousel ──
-            const track = document.getElementById('testimonialTrack');
-            const slides = track.querySelectorAll('.testimonial-slide');
-            const dotsContainer = document.getElementById('testimonialDots');
-            let currentIndex = 0;
-            const totalSlides = slides.length;
-            let autoSlideInterval;
-
-            // Build dots
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('span');
-                dot.dataset.index = i;
-                if (i === 0) dot.classList.add('active');
-                dot.addEventListener('click', function() {
-                    goTo(parseInt(this.dataset.index));
-                    resetAutoSlide();
-                });
-                dotsContainer.appendChild(dot);
-            }
-            const dots = dotsContainer.querySelectorAll('span');
-
-            function goTo(index) {
-                if (index < 0) index = totalSlides - 1;
-                if (index >= totalSlides) index = 0;
-                currentIndex = index;
-                track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
-                dots.forEach(function(d, i) {
-                    d.classList.toggle('active', i === currentIndex);
-                });
-            }
-
-            document.getElementById('prevTestimonial').addEventListener('click', function() {
-                goTo(currentIndex - 1);
-                resetAutoSlide();
-            });
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const messageDiv = document.getElementById('formMessage');
             
-            document.getElementById('nextTestimonial').addEventListener('click', function() {
-                goTo(currentIndex + 1);
-                resetAutoSlide();
-            });
-
-            function resetAutoSlide() {
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(function() {
-                    goTo(currentIndex + 1);
-                }, 6000);
-            }
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
             
-            resetAutoSlide();
+            // Use Formspree
+            fetch('https://formspree.io/f/xyzzzwjn', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value,
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    messageDiv.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                    messageDiv.classList.add('success');
+                    messageDiv.classList.remove('error');
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    setTimeout(() => {
+                        messageDiv.classList.remove('success');
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                messageDiv.textContent = '✗ Error sending message. Please try again.';
+                messageDiv.classList.add('error');
+                messageDiv.classList.remove('success');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                setTimeout(() => {
+                    messageDiv.classList.remove('error');
+                }, 5000);
+            });
+        });
 
-            // ── FAQ Accordion ──
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(function(item) {
-                const btn = item.querySelector('.faq-question');
-                btn.addEventListener('click', function() {
-                    const isOpen = item.classList.contains('open');
-                    // Close all
-                    faqItems.forEach(function(f) {
-                        f.classList.remove('open');
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
                     });
-                    if (!isOpen) {
-                        item.classList.add('open');
-                    }
-                });
+                    navToggle.classList.remove('active');
+                }
             });
-
-        })();
+        });
     </script>
-
 </body>
 </html>
