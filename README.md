@@ -2,7 +2,7 @@
 
 A serene, modern, and deeply resonant website for **Sacred Womb Reiki** by **Rohit Narendra Jitkar** – a specialized Reiki healing practice focused on supporting women and couples on their fertility and conception journey.
 
-**Live Website:** [[https://rohitjitkar.github.io/reiki-healing-website/](https://rohitjitkar.github.io/reiki-healing-website/](https://rohitjitkar.github.io/Sacred-Womb-Reiki/)
+**Live Website:** https://rohitjitkar.github.io/Sacred-Womb-Reiki/
 
 ---
 
